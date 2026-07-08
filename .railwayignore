@@ -1,0 +1,13 @@
+# Backend Docker build only needs: backend/, Dockerfile, start.sh, version.json, railway.json
+frontend/
+marketing/
+_carbon-copies/
+.wrangler/
+logs/
+**/__pycache__
+**/*.pyc
+backend/.venv
+backend/venv
+backend/backups
+backend/*.db
+.git

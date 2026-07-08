@@ -1,0 +1,31 @@
+{
+  "name": "@dgcpos/client",
+  "version": "0.2.0",
+  "description": "Official JavaScript client for the DGCPOS REST API (Community Edition)",
+  "type": "module",
+  "license": "MIT",
+  "author": "DGCPOS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Guru9115/dgcpos-community.git",
+    "directory": "packages/dgcpos-client"
+  },
+  "keywords": ["dgcpos", "pos", "retail", "api", "sdk"],
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    }
+  },
+  "files": ["src", "openapi", "examples", "LICENSE", "README.md"],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  }
+}

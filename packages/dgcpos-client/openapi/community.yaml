@@ -1,0 +1,335 @@
+openapi: 3.1.0
+info:
+  title: DGCPOS Community API
+  version: 0.2.0
+  description: |
+    Core REST API for DGCPOS Community Edition (self-hosted POS).
+    Enterprise-only paths (hospitality, live payments, admin) return 403 in CE.
+  license:
+    name: CC-BY-4.0
+servers:
+  - url: http://localhost:5000/api
+    description: Local development
+  - url: https://api.dgcpos.net/api
+    description: Hosted SaaS (Enterprise by default)
+security:
+  - bearerAuth: []
+tags:
+  - name: Platform
+  - name: Auth
+  - name: Products
+  - name: Sales
+  - name: Customers
+  - name: Inventory
+  - name: Reports
+  - name: Dashboard
+  - name: Settings
+  - name: Team
+  - name: Marketplace
+  - name: Suppliers
+  - name: License
+paths:
+  /health:
+    get:
+      tags: [Platform]
+      summary: Health check
+      security: []
+      responses:
+        '200':
+          description: OK
+  /edition:
+    get:
+      tags: [Platform]
+      summary: Edition info (community vs enterprise)
+      security: []
+      responses:
+        '200':
+          description: Edition payload
+  /platform-status:
+    get:
+      tags: [Platform]
+      summary: Platform module kill switches
+      security: []
+      responses:
+        '200':
+          description: Public platform status
+  /auth/login:
+    post:
+      tags: [Auth]
+      summary: Login with username/email and password
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [username, password]
+              properties:
+                username: { type: string }
+                password: { type: string }
+                remember: { type: boolean }
+      responses:
+        '200':
+          description: Access and refresh tokens
+  /auth/refresh:
+    post:
+      tags: [Auth]
+      summary: Refresh access token
+      security: []
+      responses:
+        '200':
+          description: New tokens
+  /auth/me:
+    get:
+      tags: [Auth]
+      summary: Current user profile
+      responses:
+        '200':
+          description: User object
+  /auth/logout:
+    post:
+      tags: [Auth]
+      summary: End session
+      responses:
+        '200':
+          description: Logged out
+  /products/:
+    get:
+      tags: [Products]
+      summary: List products
+      responses:
+        '200':
+          description: Product list
+    post:
+      tags: [Products]
+      summary: Create product
+      responses:
+        '201':
+          description: Created
+  /products/{id}:
+    get:
+      tags: [Products]
+      summary: Get product by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200':
+          description: Product
+  /products/barcode/{barcode}:
+    get:
+      tags: [Products]
+      summary: Lookup product by barcode
+      parameters:
+        - name: barcode
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Product
+  /products/categories:
+    get:
+      tags: [Products]
+      summary: List categories
+      responses:
+        '200':
+          description: Categories
+  /sales/:
+    get:
+      tags: [Sales]
+      summary: List sales
+      responses:
+        '200':
+          description: Sales list
+    post:
+      tags: [Sales]
+      summary: Create sale (checkout)
+      responses:
+        '201':
+          description: Sale created
+  /sales/{id}:
+    get:
+      tags: [Sales]
+      summary: Get sale by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200':
+          description: Sale
+  /sales/{id}/void:
+    put:
+      tags: [Sales]
+      summary: Void a sale
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200':
+          description: Voided
+  /customers/:
+    get:
+      tags: [Customers]
+      summary: List customers
+      responses:
+        '200':
+          description: Customer list
+    post:
+      tags: [Customers]
+      summary: Create customer
+      responses:
+        '201':
+          description: Created
+  /customers/{id}:
+    get:
+      tags: [Customers]
+      summary: Get customer
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200':
+          description: Customer
+  /inventory/low-stock:
+    get:
+      tags: [Inventory]
+      summary: Low stock alerts
+      responses:
+        '200':
+          description: Items below reorder level
+  /inventory/movements:
+    get:
+      tags: [Inventory]
+      summary: Stock movement history
+      responses:
+        '200':
+          description: Movements
+  /reports/daily:
+    get:
+      tags: [Reports]
+      summary: Daily sales report
+      responses:
+        '200':
+          description: Report data
+  /reports/summary:
+    get:
+      tags: [Reports]
+      summary: Summary report
+      responses:
+        '200':
+          description: Summary
+  /dashboard/kpis:
+    get:
+      tags: [Dashboard]
+      summary: Dashboard KPIs
+      responses:
+        '200':
+          description: KPI payload
+  /dashboard/bundle:
+    get:
+      tags: [Dashboard]
+      summary: Combined dashboard bundle
+      responses:
+        '200':
+          description: Dashboard data
+  /settings/:
+    get:
+      tags: [Settings]
+      summary: Store settings
+      responses:
+        '200':
+          description: Settings object
+    put:
+      tags: [Settings]
+      summary: Update store settings
+      responses:
+        '200':
+          description: Updated
+  /settings/version:
+    get:
+      tags: [Settings]
+      summary: App version info
+      responses:
+        '200':
+          description: Version
+  /team/context:
+    get:
+      tags: [Team]
+      summary: Team IAM context for current user
+      responses:
+        '200':
+          description: Team context
+  /marketplace/:
+    get:
+      tags: [Marketplace]
+      summary: List marketplace posts
+      responses:
+        '200':
+          description: Posts
+    post:
+      tags: [Marketplace]
+      summary: Create marketplace post
+      responses:
+        '201':
+          description: Created
+  /marketplace/public:
+    get:
+      tags: [Marketplace]
+      summary: Public marketplace feed
+      security: []
+      responses:
+        '200':
+          description: Public feed
+  /suppliers/:
+    get:
+      tags: [Suppliers]
+      summary: List suppliers
+      responses:
+        '200':
+          description: Suppliers
+    post:
+      tags: [Suppliers]
+      summary: Create supplier
+      responses:
+        '201':
+          description: Created
+  /license/status:
+    get:
+      tags: [License]
+      summary: License and edition status (self-host)
+      security: []
+      responses:
+        '200':
+          description: License status
+  /license/activate:
+    post:
+      tags: [License]
+      summary: Activate Enterprise license key
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [key]
+              properties:
+                key: { type: string }
+      responses:
+        '200':
+          description: Activated
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

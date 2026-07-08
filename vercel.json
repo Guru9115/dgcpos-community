@@ -1,0 +1,9 @@
+# DEPRECATED - Migrated from Vercel to Cloudflare Pages (2026-06)
+# This file is kept for reference only.
+# 
+# Cloudflare Pages configuration is done via dashboard or wrangler.toml:
+# - Build command: cd frontend && npm ci && npm run build
+# - Output directory: frontend/dist
+# - Set env: VITE_API_URL=https://your-railway-backend.railway.app
+#
+# See README.md for Cloudflare deployment instructions.

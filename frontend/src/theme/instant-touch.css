@@ -1,0 +1,49 @@
+/* Instant tap — no 300ms delay, immediate visual feedback on touch/click */
+
+html {
+  scroll-behavior: auto;
+}
+
+button,
+a,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+.nav-item,
+.dgc-nav-item,
+.dgc-btn,
+.btn,
+.btn-primary,
+.btn-ghost,
+.kpi-card {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:not(:disabled):active,
+.dgc-nav-item:active,
+.nav-item:active,
+.dgc-btn:active,
+.btn:active,
+.btn-primary:active,
+.btn-ghost:active {
+  transform: scale(0.98);
+  transition: transform 0.04s ease-out, background 0.04s ease-out, opacity 0.04s ease-out;
+}
+
+.dgc-nav-item.active {
+  transition: background 0.08s ease-out, color 0.08s ease-out;
+}
+
+.dgc-main-scroll {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button:not(:disabled):active,
+  .dgc-nav-item:active,
+  .nav-item:active {
+    transform: none;
+  }
+}

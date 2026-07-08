@@ -1,0 +1,11 @@
+# DEPRECATED - Migrated from Vercel to Cloudflare Pages (2026-06)
+#
+# Cloudflare Pages automatically handles SPA rewrites (fallback to index.html)
+# and has excellent default caching for /assets/* and PWA files.
+#
+# No vercel.json equivalent needed. Configure in Cloudflare dashboard:
+# - Build command: cd frontend && npm ci && npm run build
+# - Output: frontend/dist
+# - Env var: VITE_API_URL
+#
+# Headers for PWA can be set in Cloudflare Pages → Custom Pages Rules if needed.

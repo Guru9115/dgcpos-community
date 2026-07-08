@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap (optional, add if you create one)
+# Sitemap: https://dgcpos.net/sitemap.xml
+
+# Block sensitive paths
+Disallow: /api/
+Disallow: /admin/

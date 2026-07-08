@@ -1,0 +1,27 @@
+Flask==3.0.0
+Flask-Cors==4.0.0
+Flask-Login==0.6.3
+Flask-SQLAlchemy==3.1.1
+Flask-Migrate==4.0.5
+SQLAlchemy==2.0.23
+Werkzeug==3.0.1
+python-dotenv==1.0.0
+gunicorn==26.0.0
+psycopg2-binary==2.9.9
+PyJWT==2.8.0
+Flask-Limiter==3.5.0
+Flask-Compress==1.14
+sentry-sdk[flask]==2.5.1
+marshmallow==3.21.3
+reportlab==4.2.2
+openpyxl>=3.1.2
+stripe>=8.0.0
+google-api-python-client>=2.120.0
+google-auth-oauthlib>=1.2.0
+google-auth-httplib2>=0.2.0
+cryptography>=42.0.0
+redis>=5.0.0
+boto3>=1.34.0
+# Test dependencies (not installed on Railway — pip install only in dev/CI)
+# pytest==9.0.3
+# pytest-flask==1.3.0

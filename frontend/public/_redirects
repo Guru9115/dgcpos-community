@@ -1,0 +1,5 @@
+# Never SPA-fallback missing JS/CSS — returning HTML for .js breaks module load ("Starting…" forever)
+/assets/* 404
+
+# Client-side routes
+/*    /index.html   200

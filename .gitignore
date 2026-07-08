@@ -1,0 +1,64 @@
+# ── Python ────────────────────────────────────────
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/**/*.pyc
+backend/**/*.pyo
+backend/.env
+backend/retailos.db          # each install gets its own fresh database
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ── Node / Frontend ───────────────────────────────
+frontend/node_modules/
+frontend/dist/               # built on each machine — not committed
+frontend/.env
+frontend/.env.local
+frontend/android/.gradle/
+frontend/android/app/build/
+frontend/android/local.properties
+frontend/android/capacitor-cordova-android-plugins/
+frontend/ios/App/DerivedData/
+
+# ── Marketing site (dgcpos.net) ───────────────────
+marketing/node_modules/
+marketing/.next/
+marketing/.open-next/
+marketing/.wrangler/
+marketing/.vercel/
+marketing/.env
+marketing/.env.local
+
+# ── Edition export artifacts ──────────────────────
+dist/
+
+# ── Logs & runtime ────────────────────────────────
+logs/
+*.log
+*.pid
+*.pid.lock
+
+# ── macOS ─────────────────────────────────────────
+.DS_Store
+**/.DS_Store
+__MACOSX/
+
+# ── Editor ────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Owner-only private files (NEVER commit to open source) ─
+PROJECT-HANDBOOK-PRIVATE.txt
+PROJECT-HANDBOOK.txt
+BACKUP-LOCAL.command
+ENABLE-BACKUP-PERMISSIONS.command
+PUBLISH-TO-GITHUB.command
+_carbon-copies/
+marketing/data/contact-leads.json
+
+# ── Git token in remote URL — never commit this ───
+# (already excluded by being in-memory only)
+.vercel
+nest-backend/node_modules/

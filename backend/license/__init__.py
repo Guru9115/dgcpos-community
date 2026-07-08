@@ -1,0 +1,1 @@
+"""DGCPOS Enterprise license validation (Phase P5)."""
