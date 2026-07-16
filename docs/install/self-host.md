@@ -95,7 +95,7 @@ Enterprise modules are excluded from this repository export:
 - AI assistant, bulk import, gift cards, payables
 - NestJS v2 API, Redis scale layer
 
-Upgrade at [dgcpos.net/pricing](https://dgcpos.net/pricing).
+Upgrade at [dgcpos.com/pricing](https://dgcpos.com/pricing).
 
 ---
 

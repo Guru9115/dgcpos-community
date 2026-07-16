@@ -41,9 +41,9 @@ def maintenance_recipient_count():
 def _offline_sites():
     sites = []
     if not module_enabled("site_app"):
-        sites.append("RetailOS App (app.dgcpos.net)")
+        sites.append("RetailOS App (app.dgcpos.com)")
     if not module_enabled("site_marketing"):
-        sites.append("Marketing website (dgcpos.net)")
+        sites.append("Marketing website (dgcpos.com)")
     if not module_enabled("site_bazaar"):
         sites.append("DGC Bazaar marketplace")
     return sites

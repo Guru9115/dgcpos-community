@@ -59,17 +59,17 @@ def create_app(config_class=Config):
         strategy="fixed-window",
     )
 
-    # CORS — allow local dev + Cloudflare Pages (dgcpos.net) + Vercel
+    # CORS — allow local dev + Cloudflare Pages (dgcpos.com) + Vercel
     allowed = os.environ.get("ALLOWED_ORIGINS", "").split(",")
     allowed = [o.strip() for o in allowed if o.strip()]
     allowed += [
         "http://localhost:5173", "http://localhost:5174",
         "http://localhost:3000", "http://localhost:5000",
         "http://192.168.1.63:5000",
-        "https://dgcpos.net", "https://www.dgcpos.net",
-        "https://app.dgcpos.net",
-        "https://admin.dgcpos.net",
-        "https://api.dgcpos.net",
+        "https://dgcpos.com", "https://www.dgcpos.com",
+        "https://app.dgcpos.com",
+        "https://admin.dgcpos.com",
+        "https://api.dgcpos.com",
         "https://dgc-retailos-frontend.pages.dev",
         re.compile(r"^https://[a-z0-9-]+\.dgc-retailos-frontend\.pages\.dev$"),
         # Legacy Pages project name (remove after old project deleted)

@@ -549,7 +549,7 @@ def reset_password_request():
     resp = {"message": "If an account exists, a password reset email has been sent."}
     if current_app.config.get("EMAIL_ENABLED") and user.email:
         from email_service import send_email
-        frontend = current_app.config.get("FRONTEND_URL", "https://app.dgcpos.net").rstrip("/")
+        frontend = current_app.config.get("FRONTEND_URL", "https://app.dgcpos.com").rstrip("/")
         reset_url = f"{frontend}/login?mode=reset&token={plaintext}"
         html = f"""
         <div style="font-family:Arial,sans-serif;max-width:520px;margin:0 auto;color:#1a1a2e">

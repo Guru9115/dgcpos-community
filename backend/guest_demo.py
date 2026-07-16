@@ -6,7 +6,7 @@ from store_engine import normalize_store_type, get_demo_products, get_category_n
 GUEST_SETTINGS = {
     "shop_address": "Demo Lane, Kathmandu",
     "shop_phone": "+977-9800000000",
-    "shop_email": "guest@dgcpos.net",
+    "shop_email": "guest@dgcpos.com",
     "currency": "Rs.",
     "currency_code": "NPR",
     "tax_rate": "13",

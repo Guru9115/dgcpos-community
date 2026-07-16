@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from models import Setting, db
 
 SETTING_KEY = "mobile_release_ios"
-DEFAULT_DOWNLOAD_URL = "https://dgcpos.net/install"
+DEFAULT_DOWNLOAD_URL = "https://dgcpos.com/install"
 
 
 def _default_release():

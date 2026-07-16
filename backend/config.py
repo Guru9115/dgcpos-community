@@ -48,7 +48,7 @@ class Config:
     SESSION_COOKIE_NAME = "__Host-dg_session" if _is_production else "dg_session"
     SESSION_COOKIE_PATH = "/"
     SESSION_COOKIE_HTTPONLY  = True
-    SESSION_COOKIE_SAMESITE  = "None"   # cross-origin (dgcpos.net Cloudflare → Railway)
+    SESSION_COOKIE_SAMESITE  = "None"   # cross-origin (dgcpos.com Cloudflare → Railway)
     SESSION_COOKIE_SECURE    = _is_production
     REMEMBER_COOKIE_HTTPONLY = True
     REMEMBER_COOKIE_SECURE = _is_production
@@ -79,7 +79,7 @@ class Config:
     STRIPE_PRICE_STARTER   = os.environ.get("STRIPE_PRICE_STARTER", "")
     STRIPE_PRICE_PRO       = os.environ.get("STRIPE_PRICE_PRO", "")
     STRIPE_PUBLISHABLE_KEY = os.environ.get("STRIPE_PUBLISHABLE_KEY", "")
-    FRONTEND_URL           = os.environ.get("FRONTEND_URL", "https://app.dgcpos.net")
+    FRONTEND_URL           = os.environ.get("FRONTEND_URL", "https://app.dgcpos.com")
 
     # POS payment gateways — Nepal
     ESEWA_MERCHANT_CODE    = os.environ.get("ESEWA_MERCHANT_CODE", "EPAYTEST")

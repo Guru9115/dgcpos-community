@@ -39,14 +39,14 @@ DEFAULT_MAINTENANCE_MESSAGE = "DGC POS is temporarily offline for maintenance."
 
 MODULE_DEFS = {
     "site_app": {
-        "label": "RetailOS App (app.dgcpos.net)",
+        "label": "RetailOS App (app.dgcpos.com)",
         "description": "Main POS application — when off, stores see maintenance (admin stays up)",
         "setting": "site_app_enabled",
         "default": True,
         "group": "sites",
     },
     "site_marketing": {
-        "label": "Marketing website (dgcpos.net)",
+        "label": "Marketing website (dgcpos.com)",
         "description": "Public marketing site, legal pages, and signup funnel",
         "setting": "site_marketing_enabled",
         "default": True,

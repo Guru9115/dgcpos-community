@@ -26,7 +26,7 @@ _AUTH_ALLOWED_APP_OFF = frozenset({
 def _request_from_admin_host() -> bool:
     for header in ("Origin", "Referer"):
         val = request.headers.get(header) or ""
-        if "admin.dgcpos.net" in val:
+        if "admin.dgcpos.com" in val:
             return True
     return False
 
@@ -91,7 +91,7 @@ def check_request_maintenance():
 
 
 def login_allowed_when_app_off(username: str) -> bool:
-    """Only superadmin may authenticate while app.dgcpos.net is offline."""
+    """Only superadmin may authenticate while app.dgcpos.com is offline."""
     from models import User
     user = User.query.filter(
         (User.username == username) | (User.email == username),

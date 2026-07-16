@@ -275,7 +275,7 @@ def update_beta_lead(lead_id):
 
 
 def _beta_enrollment_url(enrollment_token):
-    frontend = current_app.config.get("FRONTEND_URL", "https://app.dgcpos.net").rstrip("/")
+    frontend = current_app.config.get("FRONTEND_URL", "https://app.dgcpos.com").rstrip("/")
     return f"{frontend}/beta?token={enrollment_token}"
 
 

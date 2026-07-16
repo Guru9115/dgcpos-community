@@ -102,7 +102,7 @@ def edition_api_block(path: str) -> Optional[tuple]:
         {
             "error": "Enterprise edition required",
             "edition": COMMUNITY,
-            "upgrade": "https://dgcpos.net/pricing",
+            "upgrade": "https://dgcpos.com/pricing",
         },
         403,
     )

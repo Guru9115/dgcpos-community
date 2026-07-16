@@ -82,7 +82,7 @@ def evaluate_signup(country):
     if not policy["signup_open"]:
         return False, False, (
             "Beta signups are temporarily closed. "
-            "Contact support@dgcpos.net for assistance."
+            "Contact support@dgcpos.com for assistance."
         )
 
     access = policy["access_policy"]
@@ -90,7 +90,7 @@ def evaluate_signup(country):
     if access == POLICY_NEPAL_ONLY and not is_nepal_location(country):
         return False, False, (
             "Beta signups are currently limited to businesses in Nepal. "
-            "Contact support@dgcpos.net for international access."
+            "Contact support@dgcpos.com for international access."
         )
 
     if access == POLICY_MANUAL_ONLY:
@@ -99,7 +99,7 @@ def evaluate_signup(country):
     limit = policy["signup_daily_limit"]
     if limit > 0 and _signups_today() >= limit:
         return False, False, (
-            "Daily signup limit reached. Try again tomorrow or contact support@dgcpos.net."
+            "Daily signup limit reached. Try again tomorrow or contact support@dgcpos.com."
         )
 
     return True, False, None

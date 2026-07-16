@@ -18,10 +18,10 @@ def api_public_url() -> str:
     explicit = (os.environ.get("API_PUBLIC_URL") or "").strip()
     if explicit:
         return explicit.rstrip("/")
-    frontend = (os.environ.get("FRONTEND_URL") or "https://api.dgcpos.net").strip()
+    frontend = (os.environ.get("FRONTEND_URL") or "https://api.dgcpos.com").strip()
     if "api." in frontend:
         return frontend.rstrip("/")
-    return frontend.replace("app.dgcpos.net", "api.dgcpos.net").rstrip("/")
+    return frontend.replace("app.dgcpos.com", "api.dgcpos.com").rstrip("/")
 
 
 def redirect_uri() -> str:

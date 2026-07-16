@@ -187,7 +187,7 @@ def _notify_seller_messenger(order, post, buyer_account, buyer_user, *, stay_boo
     """DM order to seller's messenger inbox."""
     seller_id = order.seller_account_id
     buyer_name = order.guest_name or (buyer_account.name if buyer_account else "DGC Store")
-    synthetic_email = f"marketplace-{order.buyer_account_id}@dgcpos.net"
+    synthetic_email = f"marketplace-{order.buyer_account_id}@dgcpos.com"
 
     thread = MessengerThread.query.filter_by(
         account_id=seller_id,
@@ -277,7 +277,7 @@ def _create_delivery_for_order(order, post, notes=None, assigned_rider=None):
     return delivery
 
 
-# ── Public feed (dgcpos.net) ────────────────────────────────────────────────
+# ── Public feed (dgcpos.com) ────────────────────────────────────────────────
 
 def _is_stay_post(post) -> bool:
     return (getattr(post, "listing_type", None) == "stay") or (
@@ -375,8 +375,8 @@ def public_shop_config():
         "currency": "NPR",
         "currency_symbol": "Rs",
         "legal": {
-            "terms_url": "https://dgcpos.net/terms",
-            "privacy_url": "https://dgcpos.net/privacy",
+            "terms_url": "https://dgcpos.com/terms",
+            "privacy_url": "https://dgcpos.com/privacy",
         },
     })
 
@@ -612,7 +612,7 @@ def public_guest_checkout():
     }
 
     if payment_method == "esewa" and grand_total > 0:
-        bazaar_return = request.headers.get("Origin") or "https://dgcpos.net"
+        bazaar_return = request.headers.get("Origin") or "https://dgcpos.com"
         return_url = f"{bazaar_return.rstrip('/')}/dgcbazaar.html?orders={','.join(order_numbers)}"
         payload["esewa_payment"] = _bazaar_esewa_redirect(grand_total, primary_ref, return_url)
 
