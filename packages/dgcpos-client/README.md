@@ -1,6 +1,6 @@
 # @dgcpos/client
 
-Official JavaScript SDK for the [DGCPOS](https://dgcpos.net) REST API (Community Edition core).
+Official JavaScript SDK for the [DGCPOS](https://dgcpos.com) REST API (Community Edition core).
 
 **License:** MIT · **Runtime:** Node 18+ and modern browsers (uses `fetch`)
 

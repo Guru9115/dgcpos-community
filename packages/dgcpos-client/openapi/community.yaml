@@ -10,7 +10,7 @@ info:
 servers:
   - url: http://localhost:5000/api
     description: Local development
-  - url: https://api.dgcpos.net/api
+  - url: https://api.dgcpos.com/api
     description: Hosted SaaS (Enterprise by default)
 security:
   - bearerAuth: []

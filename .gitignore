@@ -20,7 +20,7 @@ frontend/android/local.properties
 frontend/android/capacitor-cordova-android-plugins/
 frontend/ios/App/DerivedData/
 
-# ── Marketing site (dgcpos.net) ───────────────────
+# ── Marketing site (dgcpos.com) ───────────────────
 marketing/node_modules/
 marketing/.next/
 marketing/.open-next/
