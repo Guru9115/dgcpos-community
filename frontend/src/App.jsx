@@ -205,7 +205,7 @@ function PageLoader() {
 }
 
 const isAdminHost = () =>
-  typeof window !== 'undefined' && window.location.hostname === 'admin.dgcpos.net'
+  typeof window !== 'undefined' && window.location.hostname === 'admin.dgcpos.com'
 
 function hasStoredSession() {
   return !!(tokenStore.get() || tokenStore.getRefresh())

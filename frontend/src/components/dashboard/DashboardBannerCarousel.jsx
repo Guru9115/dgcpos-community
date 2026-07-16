@@ -4,7 +4,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const API_BASE = (import.meta.env.VITE_API_URL || 'https://api.dgcpos.net/api').replace(/\/api$/, '')
+const API_BASE = (import.meta.env.VITE_API_URL || 'https://api.dgcpos.com/api').replace(/\/api$/, '')
 
 function resolveImage(url) {
   if (!url) return null

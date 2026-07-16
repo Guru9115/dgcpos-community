@@ -1237,8 +1237,8 @@ export default function Settings() {
 
             <p className="text-txt-3 text-[10px] m-0">
               Purchase a self-hosted Enterprise license at{' '}
-              <a href="https://dgcpos.net/pricing" target="_blank" rel="noreferrer" className="text-gold hover:underline">dgcpos.net/pricing</a>
-              {' '}or contact <a href="mailto:support@dgcpos.net" className="text-gold hover:underline">support@dgcpos.net</a>.
+              <a href="https://dgcpos.com/pricing" target="_blank" rel="noreferrer" className="text-gold hover:underline">dgcpos.com/pricing</a>
+              {' '}or contact <a href="mailto:support@dgcpos.com" className="text-gold hover:underline">support@dgcpos.com</a>.
             </p>
           </div>
         </Section>

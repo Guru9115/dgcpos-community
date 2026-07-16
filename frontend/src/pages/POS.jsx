@@ -167,7 +167,7 @@ function BazaarListModal({ product, onClose, onListed }) {
         </div>
         <div className="dgc-upload-modal-body px-6 pb-4">
           <p className="text-sm text-txt-2 mb-3">{product.name} — Rs.{Number(product.selling_price || 0).toLocaleString()}</p>
-          <p className="text-xs text-txt-3 mb-4">Take a photo or publish with the name-matched preview. Listing syncs to dgcpos.net/bazaar and in-app marketplace by category.</p>
+          <p className="text-xs text-txt-3 mb-4">Take a photo or publish with the name-matched preview. Listing syncs to dgcpos.com/bazaar and in-app marketplace by category.</p>
 
           <div className="rounded-xl overflow-hidden mb-4 bg-glass border border-glass-border min-h-[140px] flex items-center justify-center">
             {preview ? (
@@ -193,7 +193,7 @@ function BazaarListModal({ product, onClose, onListed }) {
               </button>
             )}
           </div>
-          <a href="https://dgcpos.net/dgcbazaar.html" target="_blank" rel="noreferrer"
+          <a href="https://dgcpos.com/dgcbazaar.html" target="_blank" rel="noreferrer"
             className="block text-center text-xs text-gold hover:underline flex items-center justify-center gap-1">
             <ExternalLink size={11} /> Preview on public bazaar
           </a>
@@ -1209,7 +1209,7 @@ export default function POS() {
                 </h3>
                 <button type="button" onClick={() => setShowBazaarOrders(false)} className="p-2 rounded-lg hover:bg-glass text-txt-3"><X size={16} /></button>
               </div>
-              <p className="text-xs text-txt-3 mb-3 shrink-0">Online orders from dgcpos.net and the bazaar — accept to create delivery &amp; notify buyer.</p>
+              <p className="text-xs text-txt-3 mb-3 shrink-0">Online orders from dgcpos.com and the bazaar — accept to create delivery &amp; notify buyer.</p>
               <div className="flex-1 overflow-y-auto space-y-3 min-h-0">
                 {incomingBazaarOrders.length === 0 ? (
                   <div className="text-center py-10 text-txt-3 text-sm">No bazaar orders yet. List products with a photo to get online orders.</div>

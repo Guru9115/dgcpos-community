@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Capacitor } from '@capacitor/core'
 
-const PROD_API = 'https://api.dgcpos.net/api'
+const PROD_API = 'https://api.dgcpos.com/api'
 
 // Resolve API base defensively for production domains.
 // Priority:
@@ -20,7 +20,7 @@ const resolveBase = () => {
 
   if (typeof window !== 'undefined') {
     const host = window.location.hostname
-    const isProdAppHost = host === 'app.dgcpos.net' || host === 'admin.dgcpos.net'
+    const isProdAppHost = host === 'app.dgcpos.com' || host === 'admin.dgcpos.com'
     const isPreviewHost =
       host.endsWith('.dgc-retailos-frontend.pages.dev') ||
       host.endsWith('.dg-retailos-frontend.pages.dev')

@@ -383,9 +383,9 @@ export default function Login() {
                                 </Link>
                                 <p style={{ fontSize: '0.68rem', color: '#94a3b8', textAlign: 'center', margin: '8px 0 0', lineHeight: 1.5 }}>
                                     By signing in you agree to our{' '}
-                                    <a href="https://dgcpos.net/terms" target="_blank" rel="noreferrer" style={{ color: '#0B5FFF' }}>Terms</a>
+                                    <a href="https://dgcpos.com/terms" target="_blank" rel="noreferrer" style={{ color: '#0B5FFF' }}>Terms</a>
                                     {' '}and{' '}
-                                    <a href="https://dgcpos.net/privacy" target="_blank" rel="noreferrer" style={{ color: '#0B5FFF' }}>Privacy Policy</a>.
+                                    <a href="https://dgcpos.com/privacy" target="_blank" rel="noreferrer" style={{ color: '#0B5FFF' }}>Privacy Policy</a>.
                                 </p>
                             </form>
                         )}

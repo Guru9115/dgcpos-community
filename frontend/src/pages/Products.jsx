@@ -598,7 +598,7 @@ function ProductModal({ product, categories, onClose, onSaved, canSeeCost }) {
                     className="w-4 h-4 accent-gold" />
                   <span>
                     <span className="font-semibold text-txt text-sm">List on DGC Bazaar</span>
-                    <span className="block text-xs text-txt-3">Shows on dgcpos.net/bazaar and in-app marketplace when saved</span>
+                    <span className="block text-xs text-txt-3">Shows on dgcpos.com/bazaar and in-app marketplace when saved</span>
                   </span>
                 </label>
                 {editing && product?.bazaar_listed && (

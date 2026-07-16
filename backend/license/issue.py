@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Issue Enterprise license keys (operator tooling — private key required)."""
+"""Issue Enterprise license keys (operator tooling — private key required).
+
+Never commit DGCPOS_LICENSE_PRIVATE_KEY. Without it this script cannot issue valid licenses.
+"""
 from __future__ import annotations
 
 import argparse

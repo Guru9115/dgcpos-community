@@ -20,7 +20,7 @@ export class DgcCoreAIWeb {
   }
 
   async checkHealthNow() {
-    const res = await fetch('https://api.dgcpos.net/api/health')
+    const res = await fetch('https://api.dgcpos.com/api/health')
     const health = await res.json()
     return {
       checked_at: new Date().toISOString(),

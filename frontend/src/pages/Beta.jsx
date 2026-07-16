@@ -335,9 +335,9 @@ export default function Beta() {
                   <input type="checkbox" checked={acceptedTerms} onChange={(e) => setAcceptedTerms(e.target.checked)} style={{ marginTop: 3 }} />
                   <span>
                     I agree to the{' '}
-                    <a href="https://dgcpos.net/terms" target="_blank" rel="noreferrer" style={{ color: '#0B5FFF', fontWeight: 700 }}>Terms of Use</a>
+                    <a href="https://dgcpos.com/terms" target="_blank" rel="noreferrer" style={{ color: '#0B5FFF', fontWeight: 700 }}>Terms of Use</a>
                     {' '}and{' '}
-                    <a href="https://dgcpos.net/privacy" target="_blank" rel="noreferrer" style={{ color: '#0B5FFF', fontWeight: 700 }}>Privacy Policy</a>.
+                    <a href="https://dgcpos.com/privacy" target="_blank" rel="noreferrer" style={{ color: '#0B5FFF', fontWeight: 700 }}>Privacy Policy</a>.
                   </span>
                 </label>
                 <button type="submit" disabled={loading} style={{ ...primaryBtnStyle, width: '100%', justifyContent: 'center' }}>
@@ -352,8 +352,8 @@ export default function Beta() {
       <footer style={footerStyle}>
         <span>© 2026 DGC POS · All rights reserved</span>
         <span style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-          <a href="https://dgcpos.net/terms" target="_blank" rel="noreferrer" style={{ color: '#64748b', textDecoration: 'none' }}>Terms</a>
-          <a href="https://dgcpos.net/privacy" target="_blank" rel="noreferrer" style={{ color: '#64748b', textDecoration: 'none' }}>Privacy</a>
+          <a href="https://dgcpos.com/terms" target="_blank" rel="noreferrer" style={{ color: '#64748b', textDecoration: 'none' }}>Terms</a>
+          <a href="https://dgcpos.com/privacy" target="_blank" rel="noreferrer" style={{ color: '#64748b', textDecoration: 'none' }}>Privacy</a>
           <Link to="/login" style={{ color: '#0B5FFF', textDecoration: 'none', fontWeight: 700 }}>Sign in</Link>
         </span>
       </footer>

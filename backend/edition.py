@@ -41,7 +41,7 @@ EE_API_EXACT = frozenset({
 
 
 def get_edition() -> str:
-    raw = (os.environ.get("DGCPOS_EDITION") or ENTERPRISE).strip().lower()
+    raw = (os.environ.get("DGCPOS_EDITION") or COMMUNITY).strip().lower()
     return raw if raw in VALID_EDITIONS else ENTERPRISE
 
 

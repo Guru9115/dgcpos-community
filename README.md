@@ -1,10 +1,17 @@
 # DGCPOS Community Edition
 
-Open-source, self-hostable retail POS built for small shops and developers.
+Open-source, self-hostable retail POS for small shops and developers.
 
 **License:** [AGPL-3.0](LICENSE) · **Edition:** Community (no Enterprise modules)
 
-Enterprise features (hotel PMS, live payments, Command Center, AI assistant, etc.) are available on [dgcpos.net](https://dgcpos.net) or via a commercial Enterprise license.
+| Product | What it is | Where |
+|--------|------------|--------|
+| **Community (this repo)** | Open source, self-host | This GitHub repository |
+| **Cloud** | Hosted product (proprietary) | [app.dgcpos.com](https://app.dgcpos.com) · site [dgcpos.com](https://dgcpos.com) |
+
+Enterprise / advanced hosted features (hotel PMS, live payment gateways, Command Center, etc.) are part of **DGC POS Cloud** or a commercial Enterprise license — not included in this Community tree.
+
+See [dgcpos.com/open-source](https://dgcpos.com/open-source) for the dual-model statement.
 
 ---
 
@@ -12,7 +19,7 @@ Enterprise features (hotel PMS, live payments, Command Center, AI assistant, etc
 
 ```bash
 cp backend/.env.example backend/.env
-echo "DGCPOS_EDITION=community" >> backend/.env
+# DGCPOS_EDITION=community is the default in this repository
 
 docker build --build-arg DGCPOS_EDITION=community -t dgcpos-community .
 docker run -p 5000:8080 -e DGCPOS_EDITION=community dgcpos-community
@@ -36,7 +43,7 @@ cd frontend && npm ci
 npm run dev:ce
 ```
 
-Default login: `owner` / `owner123` (change after first login)
+Default demo login: `owner` / `owner123` — **change immediately** after first login on any network-exposed install.
 
 ---
 
@@ -56,12 +63,20 @@ See [docs/install/self-host.md](docs/install/self-host.md) for full setup.
 
 ---
 
-## Upgrade to Enterprise
+## Hosted Cloud / Enterprise
 
-Hosted SaaS: [https://dgcpos.net](https://dgcpos.net)
-
-Self-hosted Enterprise requires a commercial license — contact [support@dgcpos.net](mailto:support@dgcpos.net).
+- Hosted SaaS: [https://app.dgcpos.com](https://app.dgcpos.com)
+- Marketing site: [https://dgcpos.com](https://dgcpos.com)
+- Commercial / Enterprise license: [support@dgcpos.com](mailto:support@dgcpos.com)
 
 ---
 
-*© 2026 DGCPOS · Community Edition*
+## Security notes for self-hosters
+
+- Never commit real `.env` files or API keys
+- Change default passwords before exposing the app to the internet
+- Online payment gateways require Enterprise / Cloud configuration — Community is cash / record-only by design
+
+---
+
+*© 2026 DGCPOS · Community Edition (AGPL-3.0)*

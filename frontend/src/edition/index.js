@@ -1,10 +1,10 @@
 /**
  * DGCPOS edition — Community vs Enterprise (Phase P1).
- * Set VITE_DGCPOS_EDITION=community for CE builds; default enterprise for hosted SaaS.
+ * Community repo defaults to community; set VITE_DGCPOS_EDITION=enterprise only for licensed EE builds.
  */
 import { isRuntimeEnterprise } from './runtime'
 
-export const EDITION = (import.meta.env.VITE_DGCPOS_EDITION || 'enterprise').toLowerCase()
+export const EDITION = (import.meta.env.VITE_DGCPOS_EDITION || 'community').toLowerCase()
 export const IS_ENTERPRISE = EDITION !== 'community'
 export const IS_COMMUNITY = EDITION === 'community'
 

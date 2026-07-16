@@ -8,7 +8,7 @@ const config: CapacitorConfig = {
   server: {
     androidScheme: 'https',
     iosScheme: 'https',
-    allowNavigation: ['api.dgcpos.net', '*.dgcpos.net'],
+    allowNavigation: ['api.dgcpos.com', '*.dgcpos.com'],
     /* SPA fallback when WKWebView reloads after GPU/process crash */
     errorPath: 'index.html',
   },
@@ -25,7 +25,7 @@ const config: CapacitorConfig = {
     adjustMarginsForEdgeToEdge: 'auto',
   },
   plugins: {
-    // Native HTTP bypasses WKWebView CORS — required for api.dgcpos.net from iOS/Android shell
+    // Native HTTP bypasses WKWebView CORS — required for api.dgcpos.com from iOS/Android shell
     CapacitorHttp: {
       enabled: false,
     },

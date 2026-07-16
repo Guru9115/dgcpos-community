@@ -34,7 +34,7 @@ export default function NativeModeFooter() {
     ;(async () => {
       try {
         const info = await App.getInfo()
-        const res = await fetch('https://api.dgcpos.net/api/mobile-release', { cache: 'no-store' })
+        const res = await fetch('https://api.dgcpos.com/api/mobile-release', { cache: 'no-store' })
         if (!res.ok || cancelled) return
         const data = await res.json()
         setUpdateAvailable(isNewerVersion(data.ios_version, info.version))

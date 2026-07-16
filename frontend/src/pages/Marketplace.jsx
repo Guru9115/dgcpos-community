@@ -1524,20 +1524,20 @@ export default function Marketplace() {
                     <h4>Sell</h4>
                     <ul>
                       <li><button type="button" className="dgc-bz-view-all" style={{ border: 'none', padding: 0 }} onClick={() => (canPost ? setModalOpen(true) : window.location.href = '/login')}>Register your shop</button></li>
-                      <li><a href="https://dgcpos.net/dgcbazaar.html" target="_blank" rel="noreferrer">Public bazaar</a></li>
+                      <li><a href="https://dgcpos.com/dgcbazaar.html" target="_blank" rel="noreferrer">Public bazaar</a></li>
                     </ul>
                   </div>
                   <div>
                     <h4>Company</h4>
                     <ul>
-                      <li><a href="https://dgcpos.net" target="_blank" rel="noreferrer">DGC POS</a></li>
+                      <li><a href="https://dgcpos.com" target="_blank" rel="noreferrer">DGC POS</a></li>
                       <li><a href="/settings">Settings</a></li>
                     </ul>
                   </div>
                 </div>
                 <div className="dgc-bz-foot-bottom">
                   <span>© 2026 DGC Bazaar. Built on DGC RetailOS.</span>
-                  <span>dgcpos.net</span>
+                  <span>dgcpos.com</span>
                 </div>
               </footer>
             </>

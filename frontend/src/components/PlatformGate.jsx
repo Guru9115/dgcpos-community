@@ -3,19 +3,19 @@ import { Capacitor } from '@capacitor/core'
 import PlatformMaintenance from './PlatformMaintenance'
 import { usePageVisible } from '../hooks/usePageVisible'
 
-const PROD_API = 'https://api.dgcpos.net/api'
+const PROD_API = 'https://api.dgcpos.com/api'
 const STATUS_CACHE_KEY = 'dgc_platform_status_v1'
 const STATUS_CACHE_MS = 120_000
 
 const isAdminHost = () =>
-  typeof window !== 'undefined' && window.location.hostname === 'admin.dgcpos.net'
+  typeof window !== 'undefined' && window.location.hostname === 'admin.dgcpos.com'
 
 function resolveStatusApiBase() {
   if (import.meta.env.VITE_API_URL) return `${import.meta.env.VITE_API_URL}/api`
   if (Capacitor.isNativePlatform()) return PROD_API
   if (typeof window !== 'undefined') {
     const host = window.location.hostname
-    if (host === 'app.dgcpos.net' || host === 'admin.dgcpos.net') return PROD_API
+    if (host === 'app.dgcpos.com' || host === 'admin.dgcpos.com') return PROD_API
   }
   return '/api'
 }

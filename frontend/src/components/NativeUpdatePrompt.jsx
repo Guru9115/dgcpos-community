@@ -12,7 +12,7 @@ import { Capacitor } from '@capacitor/core'
 import { isNativeApp } from '../utils/capacitorInit'
 import { isNewerVersion } from '../utils/compareVersion'
 
-const PROD_API = 'https://api.dgcpos.net/api'
+const PROD_API = 'https://api.dgcpos.com/api'
 const NOTIFY_KEY = 'dgc_ios_update_notified'
 
 async function fetchRelease() {
@@ -75,7 +75,7 @@ export default function NativeUpdatePrompt() {
   }, [check])
 
   const openUpdate = async () => {
-    const url = release?.download_url || 'https://dgcpos.net/install'
+    const url = release?.download_url || 'https://dgcpos.com/install'
     setOpening(true)
     try {
       await Browser.open({ url })

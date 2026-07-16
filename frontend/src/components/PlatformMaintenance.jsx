@@ -28,8 +28,8 @@ export default function PlatformMaintenance({ message, title = 'Temporarily offl
         </p>
         <p style={{ margin: '18px 0 0', fontSize: '0.72rem', color: '#94a3b8' }}>
           Superadmin: use{' '}
-          <a href="https://admin.dgcpos.net/admin" style={{ color: '#0B5FFF', fontWeight: 600 }}>
-            admin.dgcpos.net
+          <a href="https://admin.dgcpos.com/admin" style={{ color: '#0B5FFF', fontWeight: 600 }}>
+            admin.dgcpos.com
           </a>{' '}
           to bring the app back online.
         </p>
